@@ -1,0 +1,37 @@
+/* Variables de color de la marca */
+:root {
+  --verde-principal: #198754;
+  --naranja-acento: #fd7e14;
+}
+
+/* Color naranja personalizado para insignias y fondos */
+.bg-naranja {
+  background-color: var(--naranja-acento) !important;
+}
+
+/* Estilo para los enlaces de texto */
+.nav-tienda-link {
+  color: #495057 !important; /* Gris oscuro para buen contraste en fondo blanco */
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-tienda-link:hover, 
+.nav-tienda-link.active {
+  color: var(--verde-principal) !important;
+  font-weight: 600;
+}
+
+/* Efecto hover suave para los botones circulares (Campana y Carrito) */
+.icon-btn {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background-color: #e8f5e9 !important; /* Un verde muy clarito al pasar el mouse */
+  transform: translateY(-2px);
+}

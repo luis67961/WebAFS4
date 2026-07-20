@@ -1,0 +1,70 @@
+/* =========================================
+   VARIABLES DE COLOR
+========================================= */
+:root {
+  --verde-principal: #198754;
+  --verde-claro: #e8f5e9;
+  --naranja-acento: #fd7e14;
+}
+
+/* =========================================
+   NAVBAR Y LOGO
+========================================= */
+.logo-navbar {
+  max-height: 100px; /* Limita el tamaño del logo gigante */
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-link-custom {
+  color: #555 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover, 
+.nav-link-custom.active {
+  color: var(--verde-principal) !important;
+  font-weight: 600;
+}
+
+/* =========================================
+   PIE DE PÁGINA (FOOTER)
+========================================= */
+.social-icon {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--naranja-acento) !important;
+  transform: translateY(-3px);
+}
+
+.text-naranja {
+  color: var(--naranja-acento) !important;
+}
+
+/* =========================================
+   ACORDEÓN FAQ (Sobrescribir azul de Bootstrap)
+========================================= */
+.accordion-button:not(.collapsed) {
+  background-color: var(--verde-claro);
+  color: var(--verde-principal);
+  font-weight: bold;
+}
+
+.accordion-button:focus {
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+.accordion-button::after {
+  filter: hue-rotate(120deg); /* Ajusta el ícono de la flecha al tono verde/oscuro */
+}   
+
+/* Agrega esto a tu index.css */
+#ventanaChat {
+    display: block !important; /* Si quieres controlar la visibilidad solo con JS */
+}
+#ventanaChat.d-none {
+    display: none !important;
+}

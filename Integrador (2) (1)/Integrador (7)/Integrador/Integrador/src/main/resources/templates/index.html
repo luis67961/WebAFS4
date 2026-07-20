@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Feed Solutions</title>
+
+  <link rel="stylesheet" th:href="@{/estilos/index.css}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div th:replace="fragmentos/navbar :: navbar"></div>
+
+    <!-- HERO SECTION -->
+    <section class="py-5" id="heroSection">
+      <div class="container mt-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div
+              class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2 mb-3 fw-medium border border-success">
+              Nutrición de precisión · Trujillo, Perú
+            </div>
+            <h1 class="display-4 fw-bold text-dark mb-4">
+              Nutrición inteligente <span class="text-success">para el futuro animal.</span>
+            </h1>
+            <p class="lead text-secondary mb-5">
+              Alimento balanceado para avícolas, vacuno, acuícolas y mascotas.
+              Seguimiento técnico, calidad certificada y precios al alcance del campo.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-5">
+              <a th:href="@{/tienda}" class="btn btn-success btn-lg px-4 rounded-pill shadow-sm">
+                Comprar <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a href="https://wa.me/51967307763?text=Hola%20quiero%20realizar%20un%20PEDIDO" target="_blank"
+                class="btn btn-naranja btn-lg px-4 rounded-pill shadow-sm d-flex align-items-center gap-2">
+                <i class="fa-brands fa-whatsapp fs-5"></i> WHATSAPP
+              </a>
+            </div>
+
+            <div class="row g-4 border-top pt-4 text-center text-md-start">
+              <div class="col-4">
+                <h2 class="fw-bold text-success mb-0">+18</h2><span class="text-secondary small">años</span>
+              </div>
+              <div class="col-4">
+                <h2 class="fw-bold text-success mb-0">1</h2><span class="text-secondary small">granjas</span>
+              </div>
+              <div class="col-4">
+                <h2 class="fw-bold text-success mb-0">98%</h2><span class="text-secondary small">satisfacción</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 position-relative">
+            <div class="ratio ratio-4x3 shadow-lg rounded">
+              <video class="hero-video" autoplay muted loop playsinline>
+                <source
+                  src="https://raw.githubusercontent.com/davonlzz18/cosas/main/cinematic_sunlit_poultry_farm_chickensmp_.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="py-5" id="nosotros">
+      <div class="container py-5 border-top">
+        <div class="text-center mb-5">
+          <span class="badge bg-naranja bg-opacity-10 text-naranja rounded-pill px-3 py-2 mb-3">Nosotros</span>
+          <h2 class="fw-bold display-6">Más de 18 años nutriendo el campo peruano</h2>
+        </div>
+
+        <div class="row g-5 mb-5 text-center">
+          <div class="col-md-4">
+            <div class="card h-100 border border-success border-opacity-25 shadow-sm p-4 rounded-4">
+              <div class="display-5 text-naranja mb-3"><i class="bi bi-star-fill"></i></div>
+              <h4 class="fw-bold text-success">Misión</h4>
+              <p class="text-secondary">Brindar alimento balanceado de calidad superior para maximizar el rendimiento.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border border-success border-opacity-25 shadow-sm p-4 rounded-4">
+              <div class="display-5 text-success mb-3"><i class="bi bi-eye-fill"></i></div>
+              <h4 class="fw-bold text-success">Visión</h4>
+              <p class="text-secondary">Ser la marca líder de nutrición animal en Sudamérica apoyando al productor.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border border-success border-opacity-25 shadow-sm p-4 rounded-4">
+              <div class="display-5 text-naranja mb-3"><i class="bi bi-heart-fill"></i></div>
+              <h4 class="fw-bold text-success">Valores</h4>
+              <p class="text-secondary">Integridad, ciencia, sostenibilidad y compromiso con el agricultor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PRODUCTOS -->
+    <section class="py-5 bg-light" id="catalogo">
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+          <span class="badge bg-success-subtle text-success rounded-pill px-3 py-2">
+            Catálogo
+          </span>
+
+          <h2 class="fw-bold mt-3">
+            Productos por especie
+          </h2>
+
+          <p class="text-secondary">
+            Selecciona el alimento que mejor se adapte a tu producción.
+          </p>
+        </div>
+
+     <div class="row g-4">
+
+    <!-- Inicio -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                style="height:220px; object-fit:cover;"
+                alt="Inicio">
+
+            <div class="card-body d-flex flex-column">
+                <h5 class="fw-bold text-success">Inicio</h5>
+
+                <p class="text-muted flex-grow-1">
+                    Alimento para pollos en etapa inicial.
+                </p>
+
+                <a href="#" class="btn btn-success w-100 mt-auto">
+                    Comprar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Crecimiento -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                style="height:220px; object-fit:cover;"
+                alt="Crecimiento">
+
+            <div class="card-body d-flex flex-column">
+                <h5 class="fw-bold text-success">Crecimiento</h5>
+
+                <p class="text-muted flex-grow-1">
+                    Fórmula rica en proteínas.
+                </p>
+
+                <a href="#" class="btn btn-success w-100 mt-auto">
+                    Comprar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Engorde -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                style="height:220px; object-fit:cover;"
+                alt="Engorde">
+
+            <div class="card-body d-flex flex-column">
+                <h5 class="fw-bold text-success">Engorde</h5>
+
+                <p class="text-muted flex-grow-1">
+                    Máxima conversión alimenticia.
+                </p>
+
+                <a href="#" class="btn btn-success w-100 mt-auto">
+                    Comprar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Postura -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                style="height:220px; object-fit:cover;"
+                alt="Postura">
+
+            <div class="card-body d-flex flex-column">
+                <h5 class="fw-bold text-success">Postura</h5>
+
+                <p class="text-muted flex-grow-1">
+                    Ideal para gallinas ponedoras.
+                </p>
+
+                <a href="#" class="btn btn-success w-100 mt-auto">
+                    Comprar
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+      </div>
+
+    </section>
+    <section class="py-5" id="almacenamiento">
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+
+          <span class="badge bg-warning text-dark rounded-pill">
+            Manejo correcto
+          </span>
+
+          <h2 class="fw-bold mt-3">
+
+            Almacena tu alimento correctamente
+
+          </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card text-center h-100 shadow-sm border-0">
+
+              <div class="card-body">
+
+                <div class="display-4">
+
+                  ☀️
+
+                </div>
+
+                <h5 class="text-success">
+
+                  Lejos del sol
+
+                </h5>
+
+                <p>
+
+                  Evita la exposición directa.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card text-center h-100 shadow-sm border-0">
+
+              <div class="card-body">
+
+                <div class="display-4">
+
+                  🌡️
+
+                </div>
+
+                <h5 class="text-success">
+
+                  22°C
+
+                </h5>
+
+                <p>
+
+                  Mantener temperatura fresca.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card text-center h-100 shadow-sm border-0">
+
+              <div class="card-body">
+
+                <div class="display-4">
+
+                  💧
+
+                </div>
+
+                <h5 class="text-success">
+
+                  Ambiente seco
+
+                </h5>
+
+                <p>
+
+                  Evitar humedad.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+
+            <div class="card text-center h-100 shadow-sm border-0">
+
+              <div class="card-body">
+
+                <div class="display-4">
+
+                  📦
+
+                </div>
+
+                <h5 class="text-success">
+
+                  FIFO
+
+                </h5>
+
+                <p>
+
+                  Primero en entrar, primero en salir.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <section class="py-5 bg-light" id="contacto">
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-6">
+
+            <h2 class="fw-bold text-success">
+
+              Contáctanos
+
+            </h2>
+
+            <p class="text-secondary">
+
+              Te responderemos en menos de 24 horas.
+
+            </p>
+
+             <form id="formContacto" action="/contacto" method="POST" class="p-4 bg-white rounded-4 shadow">
+
+    <div class="mb-3">
+        <label for="nombre" class="form-label fw-semibold text-success">
+            Nombre completo
+        </label>
+
+        <input type="text"
+               id="nombre"
+               name="nombre"
+               class="form-control border-2 border-success rounded-3"
+               placeholder="Ingrese su nombre">
+
+        <small id="errorNombre" class="text-danger"></small>
+    </div>
+
+    <div class="mb-3">
+        <label for="correo" class="form-label fw-semibold text-success">
+            Correo electrónico
+        </label>
+
+        <input type="email"
+               id="correo"
+               name="correo"
+               class="form-control border-2 border-success rounded-3"
+               placeholder="ejemplo@correo.com">
+
+        <small id="errorCorreo" class="text-danger"></small>
+    </div>
+
+    <div class="mb-3">
+        <label for="telefono" class="form-label fw-semibold text-success">
+            Teléfono
+        </label>
+
+        <input type="tel"
+               id="telefono"
+               name="telefono"
+               class="form-control border-2 border-success rounded-3"
+               placeholder="+51 999 999 999">
+
+        <small id="errorTelefono" class="text-danger"></small>
+    </div>
+
+    <div class="mb-4">
+        <label for="mensaje" class="form-label fw-semibold text-success">
+            Mensaje
+        </label>
+
+        <textarea id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  class="form-control border-2 border-success rounded-3"
+                  placeholder="Escriba su mensaje..."></textarea>
+
+        <small id="errorMensaje" class="text-danger"></small>
+    </div>
+
+    <button type="submit"
+            id="btnEnviar"
+            class="btn btn-success w-100 rounded-pill py-3 fw-bold shadow-sm">
+
+        <span id="textoBtn">
+            <i class="fa-solid fa-paper-plane me-2"></i>
+            Enviar mensaje
+        </span>
+
+        <span id="loader"
+              class="spinner-border spinner-border-sm ms-2"
+              style="display:none;"></span>
+
+    </button>
+
+</form>
+
+          </div>
+
+        <div class="col-lg-6">
+
+    <div class="card shadow-lg border-0 rounded-4 h-100 overflow-hidden">
+
+        <div class="card-header bg-success text-white py-3">
+            <h4 class="mb-0 fw-bold">
+                <i class="fa-solid fa-building me-2"></i>
+                Información de contacto
+            </h4>
+        </div>
+
+
+        <div class="card-body p-4">
+
+
+            <div class="d-flex align-items-center mb-4">
+
+                <div class="bg-success text-white rounded-circle p-3 me-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <h6 class="fw-bold mb-1">Ubicación</h6>
+                    <p class="text-muted mb-0">
+                        Trujillo - Perú
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="d-flex align-items-center mb-4">
+
+                <div class="bg-success text-white rounded-circle p-3 me-3">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <h6 class="fw-bold mb-1">Teléfono</h6>
+                    <p class="text-muted mb-0">
+                        +51 999 888 777
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <div class="d-flex align-items-center mb-4">
+
+                <div class="bg-success text-white rounded-circle p-3 me-3">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h6 class="fw-bold mb-1">Correo electrónico</h6>
+                    <p class="text-muted mb-0">
+                        ventas@animalfeed.com.pe
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <hr>
+
+
+            <a href="https://wa.me/51912300685"
+               class="btn btn-success rounded-pill w-100 py-3 fw-bold shadow-sm">
+
+                <i class="fa-brands fa-whatsapp me-2 fs-5"></i>
+                Contactar por WhatsApp
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- ENVIOS -->
+    <section class="py-5 bg-light" id="envios">
+      <div class="container">
+        <div
+          class="row align-items-center g-5 bg-white p-4 p-md-5 rounded-4 shadow-sm border border-success border-opacity-25">
+          <div class="col-lg-6">
+            <span class="badge bg-naranja rounded-pill px-3 py-2 mb-3">
+              <i class="bi bi-truck me-1"></i> Cobertura logística nacional
+            </span>
+            <h2 class="fw-bold display-6 mb-4">
+              Envíos <span class="text-success">GRATIS</span> en Trujillo
+            </h2>
+            <p class="text-secondary mb-4">
+              Distribuimos alimento balanceado directamente desde nuestra planta hacia granjas y negocios. Entregas
+              seguras y rápidas.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-naranja me-2"></i> Trujillo Metropolitano
+                <strong>GRATIS en 24h</strong>
+              </li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Seguimiento en tiempo real</li>
+            </ul>
+            <a href="https://wa.me/51912300685" target="_blank" class="btn btn-naranja btn-lg rounded-pill px-4">Cotizar
+              Envío</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow" alt="Transporte">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5" id="faq">
+      <div class="container" style="max-width: 800px;">
+        <div class="text-center mb-5">
+          <span class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2 mb-3">Preguntas comunes</span>
+          <h2 class="fw-bold display-6">Resolvemos tus dudas</h2>
+        </div>
+        <div
+          class="accordion accordion-flush shadow-sm border border-success border-opacity-25 rounded-4 overflow-hidden"
+          id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button fw-bold text-success" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c1">¿Cuánto demora un pedido?</button></h2>
+            <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">Despachamos en 24 a 48 horas dentro de Trujillo. A provincias entre 3 y 5
+                días.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold text-success" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c2">¿El precio incluye IGV?</button></h2>
+            <div id="c2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">Sí, todos los precios incluyen IGV.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="contenedor-chat-flotante position-fixed bottom-0 end-0 p-3 p-md-4 z-3" style="width: auto;">
+
+      <div class="ventana-chat card shadow-lg border-0 rounded-4 mb-3 d-none" id="ventanaChat"
+        style="width: 350px; max-width: calc(100vw - 2rem);">
+
+        <div
+          class="encabezado-chat card-header bg-success text-white p-3 d-flex align-items-center gap-3 border-bottom-0"
+          style="border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
+          <div
+            class="avatar-asistente bg-white text-success rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+            style="width: 40px; height: 40px;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4-3.9-3.8 5.4-.8z" />
+            </svg>
+          </div>
+          <div class="info-asistente lh-sm">
+            <h4 class="mb-0 fw-bold fs-6"> Animal Feed Solutions</h4>
+            <div class="estado-linea d-flex align-items-center gap-2 text-white-50 small mt-1">
+              <span class="punto-verde rounded-circle bg-warning" style="width: 8px; height: 8px;"></span>
+              <span>En línea</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cuerpo-chat card-body bg-light overflow-auto p-3" style="height: 320px;">
+          <div
+            class="mensaje-bot bg-white p-3 rounded-4 shadow-sm mb-3 text-secondary small border-start border-success border-4">
+            <p class="mb-0">¡Hola! Soy 🐔 Asistente AFS. Pregúntame sobre pedidos, productos o el sistema.</p>
+          </div>
+
+          <div class="bloque-sugerencias-chat d-flex flex-wrap gap-2">
+            <button class="chip-sugerencia btn btn-outline-success btn-sm rounded-pill fw-medium">¿Cómo creo un
+              pedido?</button>
+            <button class="chip-sugerencia btn btn-outline-success btn-sm rounded-pill fw-medium">Ver productos</button>
+            <button class="chip-sugerencia btn btn-outline-success btn-sm rounded-pill fw-medium">Estado de mis
+              pagos</button>
+            <button class="chip-sugerencia btn btn-outline-success btn-sm rounded-pill fw-medium">Hablar con
+              soporte</button>
+          </div>
+        </div>
+
+        <div class="pie-chat card-footer bg-white p-2 d-flex gap-2 align-items-center border-top-0"
+          style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
+          <input type="text" placeholder="Escribe un mensaje..." id="inputMensajeChat"
+            class="form-control border-0 bg-light rounded-pill px-3 shadow-none">
+          <button
+            class="boton-enviar-chat btn btn-success rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+            aria-label="Enviar mensaje" style="width: 45px; height: 45px;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="text-end">
+        <button
+          class="boton-toggle-chat btn btn-success rounded-circle shadow-lg position-relative d-inline-flex align-items-center justify-content-center"
+          id="btnToggleChat" aria-label="Abrir chat de soporte" style="width: 65px; height: 65px; border: none;">
+          <span
+            class="notificacion-dot position-absolute top-0 start-100 translate-middle p-2 border border-2 border-white rounded-circle"
+            style="background-color: #fd7e14;">
+            <span class="visually-hidden">Nuevas notificaciones</span>
+          </span>
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path
+              d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div th:replace="fragmentos/pie :: pie"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script th:src="@{/script/chat.js}"></script>
+  <script th:src="@{/script/nav.js}"></script>
+  <script th:src="@{/script/index.js}"></script>
+</body>
+
+</html>

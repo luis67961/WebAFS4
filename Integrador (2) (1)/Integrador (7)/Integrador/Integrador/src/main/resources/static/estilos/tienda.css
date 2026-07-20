@@ -1,0 +1,151 @@
+/* Corrección para las imágenes y la rejilla de productos */
+#rejillaProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Ajuste para que las imágenes no ocupen toda la pantalla */
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+/* Estilo para las tarjetas de producto */
+.card {
+    transition: transform 0.2s;
+    border: 1px solid #eee;
+    border-radius: 15px !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+#rejillaProductos img {
+    max-width: 100%;
+    height: 150px !important;
+    width: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+/* Contenedor principal de la rejilla */
+#rejillaProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+/* Estilo para el contenedor padre de la tarjeta */
+.parent {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos de la tarjeta (Card) */
+.card {
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ajuste de la imagen del producto */
+.img-producto {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Ordenar contenido de texto */
+.contt {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Etiquetas de peso y proteína */
+.etiquetas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.etiquetas span {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+/* Pie de tarjeta con precio y botón */
+.footer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #198754;
+}
+
+.view-more-button {
+    background: #198754;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* Ajustes para el Offcanvas del Carrito */
+.offcanvas-body {
+    padding: 15px;
+}
+
+.cart-item {
+    border-radius: 10px !important;
+}
+
+/* Estilo para los botones de cantidad */
+.btn-group-sm .btn {
+    padding: 0.2rem 0.6rem;
+}
+
+/* Mejora del total */
+#cart-total {
+    font-size: 1.25rem;
+    color: #198754;
+}
+
+/* Botón de Finalizar */
+.btn-finalizar {
+    background-color: #198754 !important;
+    border: none;
+    font-weight: bold;
+}

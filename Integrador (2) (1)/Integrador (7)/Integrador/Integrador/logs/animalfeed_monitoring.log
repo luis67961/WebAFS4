@@ -1,0 +1,32 @@
+2026-07-19T18:29:17.992-05:00  INFO 26916 --- [Integrador] [restartedMain] c.e.Integrador.IntegradorApplication     : Starting IntegradorApplication using Java 21.0.6 with PID 26916 (C:\Users\david\Downloads\Integrador (2) (1)\Integrador (7)\Integrador\Integrador\target\classes started by david in C:\Users\david\Downloads\Integrador (2) (1)\Integrador (7)\Integrador\Integrador)
+2026-07-19T18:29:17.995-05:00  INFO 26916 --- [Integrador] [restartedMain] c.e.Integrador.IntegradorApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-07-19T18:29:18.057-05:00  INFO 26916 --- [Integrador] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-19T18:29:18.063-05:00  INFO 26916 --- [Integrador] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-19T18:29:19.498-05:00  INFO 26916 --- [Integrador] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-19T18:29:19.622-05:00  INFO 26916 --- [Integrador] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 14 JPA repository interfaces.
+2026-07-19T18:29:21.068-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-19T18:29:21.082-05:00  INFO 26916 --- [Integrador] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-19T18:29:21.082-05:00  INFO 26916 --- [Integrador] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-07-19T18:29:21.153-05:00  INFO 26916 --- [Integrador] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-19T18:29:21.153-05:00  INFO 26916 --- [Integrador] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3089 ms
+2026-07-19T18:29:21.588-05:00  INFO 26916 --- [Integrador] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-19T18:29:21.642-05:00  INFO 26916 --- [Integrador] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-07-19T18:29:21.679-05:00  INFO 26916 --- [Integrador] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-19T18:29:22.015-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-19T18:29:22.038-05:00  INFO 26916 --- [Integrador] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-19T18:29:22.362-05:00  INFO 26916 --- [Integrador] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6937940d
+2026-07-19T18:29:22.365-05:00  INFO 26916 --- [Integrador] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-19T18:29:22.411-05:00  WARN 26916 --- [Integrador] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-19T18:29:22.413-05:00  WARN 26916 --- [Integrador] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-07-19T18:29:23.667-05:00  INFO 26916 --- [Integrador] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-19T18:29:23.797-05:00  INFO 26916 --- [Integrador] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-19T18:29:24.356-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-19T18:29:25.843-05:00  WARN 26916 --- [Integrador] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-19T18:29:25.913-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-07-19T18:29:27.628-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-19T18:29:27.646-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-07-19T18:29:27.741-05:00  INFO 26916 --- [Integrador] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-19T18:29:27.756-05:00  INFO 26916 --- [Integrador] [restartedMain] c.e.Integrador.IntegradorApplication     : Started IntegradorApplication in 10.335 seconds (process running for 11.562)
+2026-07-19T18:29:29.743-05:00  INFO 26916 --- [Integrador] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-19T18:29:29.743-05:00  INFO 26916 --- [Integrador] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-19T18:29:29.748-05:00  INFO 26916 --- [Integrador] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms

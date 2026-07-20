@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mi Cuenta - Tienda</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body class="bg-light">
+
+
+  <!-- NAVBAR -->
+  <div th:replace="~{fragmentos/navTienda :: navbarT}"></div>
+
+  <div th:replace="~{fragmentos/carrito :: cartOffcanvas}"></div>
+
+
+
+  <!-- ALERTA ERROR -->
+  <div class="container mt-4" th:if="${error}">
+
+    <div class="alert alert-danger shadow-sm rounded-4">
+
+      <i class="bi bi-exclamation-triangle-fill me-2"></i>
+
+      <span th:text="${error}"></span>
+
+    </div>
+
+  </div>
+
+
+
+  <main class="container py-5">
+
+
+    <!-- ================================
+     USUARIO NO LOGUEADO
+================================ -->
+
+    <div th:if="${usuario == null}">
+
+
+      <div class="row align-items-center justify-content-center g-5">
+
+
+        <!-- BIENVENIDA -->
+
+        <div class="col-lg-5 text-center text-lg-start">
+
+
+          <span class="badge bg-success bg-opacity-10 text-success border border-success rounded-pill px-3 py-2">
+
+            <i class="bi bi-person-circle"></i>
+            Mi Cuenta
+
+          </span>
+
+
+
+          <h1 class="display-5 fw-bold text-dark mt-3">
+
+            Bienvenido a la Tienda
+
+          </h1>
+
+
+          <p class="lead text-secondary">
+
+            Inicia sesión o crea tu cuenta para comprar productos,
+            gestionar pedidos y disfrutar nuestros servicios.
+
+          </p>
+
+
+
+          <button class="btn btn-success btn-lg rounded-pill px-5 shadow" data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+
+            <i class="bi bi-box-arrow-in-right me-2"></i>
+
+            Iniciar sesión
+
+          </button>
+
+
+
+        </div>
+
+
+
+
+
+
+        <!-- REGISTRO -->
+
+
+        <div class="col-lg-6 col-xl-5">
+
+
+          <div class="card border-0 shadow-sm rounded-4 p-4">
+
+
+            <div class="text-center">
+
+              <h3 class="fw-bold text-success">
+
+                Crear cuenta
+
+              </h3>
+
+
+              <p class="text-secondary">
+
+                Regístrate para continuar
+
+              </p>
+
+
+            </div>
+
+
+
+
+            <form action="/registro" method="post" class="row g-3">
+
+
+              <div class="col-md-6">
+
+                <input class="form-control bg-light border-0 rounded-3" name="nombres" placeholder="Nombres" required>
+
+              </div>
+
+
+
+              <div class="col-md-6">
+
+                <input class="form-control bg-light border-0 rounded-3" name="apellidos" placeholder="Apellidos"
+                  required>
+
+              </div>
+
+
+
+              <div class="col-12">
+
+                <input type="email" class="form-control bg-light border-0 rounded-3" name="email"
+                  placeholder="Correo electrónico" required>
+
+              </div>
+
+
+
+              <div class="col-12">
+
+                <input type="password" class="form-control bg-light border-0 rounded-3" name="password"
+                  placeholder="Contraseña" required>
+
+              </div>
+
+
+
+
+              <div class="col-md-6">
+
+                <input class="form-control bg-light border-0 rounded-3" name="dni" placeholder="DNI" required>
+
+              </div>
+
+
+
+
+              <div class="col-md-6">
+
+                <input class="form-control bg-light border-0 rounded-3" name="whatsapp" placeholder="WhatsApp" required>
+
+              </div>
+
+
+
+
+              <div class="col-12">
+
+                <label class="small text-secondary">
+                  Fecha nacimiento
+                </label>
+
+                <input type="date" class="form-control bg-light border-0 rounded-3" name="fechaNacimiento" required>
+
+              </div>
+
+
+
+
+              <div class="col-12 mt-4">
+
+
+                <button class="btn btn-lg w-100 rounded-pill text-white fw-bold shadow" style="background:#fd7e14">
+
+                  Crear cuenta
+
+                </button>
+
+
+              </div>
+
+
+
+            </form>
+
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ================================
+     PERFIL USUARIO
+================================ -->
+
+
+    <div th:if="${usuario != null}">
+
+
+      <div class="row justify-content-center">
+
+
+        <div class="col-md-8 col-lg-6">
+
+
+          <div class="card border-0 shadow rounded-4 overflow-hidden">
+
+
+
+            <!-- HEADER -->
+
+
+            <div class="bg-success text-white text-center p-5">
+
+
+              <i class="bi bi-person-circle display-1"></i>
+
+
+              <h3 class="fw-bold mt-3">
+
+                Mi Perfil
+
+              </h3>
+
+
+              <p class="text-white-50">
+
+                Información de tu cuenta
+
+              </p>
+
+
+            </div>
+
+
+
+
+
+            <!-- DATOS -->
+
+
+            <ul class="list-group list-group-flush">
+
+
+
+              <li class="list-group-item p-4 d-flex justify-content-between">
+
+                <span>
+                  <i class="bi bi-envelope-fill text-success me-2"></i>
+                  Email
+                </span>
+
+
+                <strong th:text="${usuario.email}"></strong>
+
+
+              </li>
+
+
+
+
+
+              <li class="list-group-item p-4 d-flex justify-content-between">
+
+                <span>
+                  <i class="bi bi-person-fill text-success me-2"></i>
+                  Nombres
+                </span>
+
+
+                <strong th:text="${usuario.nombres}"></strong>
+
+
+              </li>
+
+
+
+
+
+              <li class="list-group-item p-4 d-flex justify-content-between">
+
+                <span>
+                  <i class="bi bi-person-badge text-success me-2"></i>
+                  Apellidos
+                </span>
+
+
+                <strong th:text="${usuario.apellidos}"></strong>
+
+
+              </li>
+
+
+
+
+
+              <li class="list-group-item p-4 d-flex justify-content-between">
+
+                <span>
+                  <i class="bi bi-credit-card text-success me-2"></i>
+                  DNI
+                </span>
+
+
+                <strong th:text="${usuario.dni}"></strong>
+
+
+              </li>
+
+
+
+
+
+              <li class="list-group-item p-4 d-flex justify-content-between">
+
+                <span>
+                  <i class="bi bi-whatsapp text-success me-2"></i>
+                  WhatsApp
+                </span>
+
+
+                <strong th:text="${usuario.whatsapp}"></strong>
+
+
+              </li>
+
+
+
+
+            </ul>
+
+
+
+
+
+            <!-- BOTONES -->
+
+
+            <div class="card-footer bg-white p-4">
+
+
+              <div class="d-flex gap-3 flex-column flex-md-row">
+
+
+                <form action="/logout" method="post" class="w-100">
+
+
+                  <button class="btn btn-outline-secondary rounded-pill w-100">
+
+                    <i class="bi bi-box-arrow-right"></i>
+
+                    Cerrar sesión
+
+                  </button>
+
+
+                </form>
+
+
+
+                <form id="deleteForm" class="w-100">
+
+
+                  <button type="button" class="btn btn-outline-danger rounded-pill w-100">
+
+
+                    <i class="bi bi-trash"></i>
+
+                    Eliminar cuenta
+
+
+                  </button>
+
+
+                </form>
+
+
+
+              </div>
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </main>
+
+
+
+
+
+  <!-- MODAL LOGIN -->
+
+
+  <div class="modal fade" id="loginModal">
+
+
+    <div class="modal-dialog modal-dialog-centered">
+
+
+      <div class="modal-content border-0 rounded-4 shadow">
+
+
+        <div class="modal-header">
+
+
+          <h4 class="text-success fw-bold">
+
+            <i class="bi bi-person-lock"></i>
+
+            Iniciar sesión
+
+          </h4>
+
+
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+
+
+        </div>
+
+
+
+        <div class="modal-body p-4">
+
+
+          <form action="/iniciar-sesion" method="post">
+
+
+            <div class="mb-3">
+
+              <label class="form-label">
+
+                Correo
+
+              </label>
+
+              <input class="form-control bg-light border-0" type="email" name="email" required>
+
+            </div>
+
+
+
+            <div class="mb-3">
+
+
+              <label class="form-label">
+
+                Contraseña
+
+              </label>
+
+
+              <input class="form-control bg-light border-0" type="password" name="password" required>
+
+
+            </div>
+
+
+
+
+            <button class="btn btn-success w-100 rounded-pill">
+
+              Ingresar
+
+            </button>
+
+
+
+          </form>
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+  <div id="toast"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script th:src="@{/script/registroUsuario.js}"></script>
+  <script th:src="@{/script/tienda.js}"></script>
+  <script th:src="@{/script/misPedidos.js}"></script>
+  <script th:src="@{/script/SolicitarVisita.js}"></script>
+
+
+
+</body>
+
+</html>
